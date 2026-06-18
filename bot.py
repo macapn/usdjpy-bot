@@ -3,9 +3,17 @@ import os
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-data = requests.get(
-    "https://query1.finance.yahoo.com/v8/finance/chart/JPY=X?interval=1h&range=1d"
-).json()
+response = requests.get(
+    "https://query1.finance.yahoo.com/v8/finance/chart/JPY=X?interval=1h&range=1d",
+    headers={
+        "User-Agent": "Mozilla/5.0"
+    },
+    timeout=10
+)
+
+print(response.text)
+
+data = response.json()
 
 result = data["chart"]["result"][0]
 
