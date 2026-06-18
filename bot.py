@@ -56,13 +56,13 @@ now = datetime.now(ZoneInfo("Asia/Tokyo"))
 
 message = {
     "content":
-        f"💱 USD/JPY\n\n"
-        f"現在値: {current:.3f}\n\n"
+        f"ドル円レート\n"
+        f"現在値: {current:.3f}\n"
         f"{emoji} 1時間変動: {sign}{change:.3f}円 ({sign}{percent:.2f}%)\n\n"
         f"本日高値: {high_day:.3f}\n"
-        f"本日安値: {low_day:.3f}\n\n"
+        f"本日安値: {low_day:.3f}\n"
         f"5時間移動平均: {ma5:.3f}\n"
-        f"{trend}\n\n"
+        f"{trend}\n"
         f"{now.strftime('%Y-%m-%d %H:%M JST')}"
 }
 
