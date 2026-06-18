@@ -56,7 +56,7 @@ now = datetime.now(ZoneInfo("Asia/Tokyo"))
 
 message = {
     "content":
-        f"ドル円\n"
+        f"ドル円\n\n"
         f"現在値: {current:.3f}\n"
         f"{emoji} 1時間変動: {sign}{change:.3f}円 ({sign}{percent:.2f}%)\n"
         f"高値: {high_day:.3f}\n"
